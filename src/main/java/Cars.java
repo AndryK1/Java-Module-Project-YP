@@ -6,32 +6,32 @@ public class Cars {
     String name;
 
     public Cars() {
-        this.scanner = new Scanner(System.in);
-        this.speed = 0;
-        this.name = null;
+        scanner = new Scanner(System.in);
+        speed = 0;
+        name = null;
     }
 
     public void setCar() {
         System.out.println("Назввание: ");
-        this.name = this.scanner.nextLine();
+        name = scanner.nextLine();
         System.out.println("Скорость: ");
 
-        while(!this.scanner.hasNextInt()) {
-            this.scanner.next();
+        while(!scanner.hasNextInt()) {
+            scanner.next();
             System.out.println("Скорость может быть выражена только целым числом, попробуйте ещё раз: ");
         }
 
-        this.speed = this.scanner.nextInt();
-        if (!(this.speed > 0 & this.speed <= 250)) {
-            while(!(this.speed > 0 & this.speed <= 250)) {
+        speed = scanner.nextInt();
+        if (!(speed > 0 & speed <= 250)) {
+            while(!(speed > 0 & speed <= 250)) {
                 System.out.println("Скорость должна быть больше 0 и меньше 250, попробуйте указать её ещё раз:");
 
-                while(!this.scanner.hasNextInt()) {
-                    this.scanner.next();
+                while(!scanner.hasNextInt()) {
+                    scanner.next();
                     System.out.println("Скорость может быть выражена только целым числом, попробуйте ещё раз: ");
                 }
 
-                this.speed = this.scanner.nextInt();
+                speed = scanner.nextInt();
             }
         }
 
